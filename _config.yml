@@ -1,6 +1,6 @@
 safe: true
 include: [_headers]
-exclude: [.gitignore, _bin, CNAME, LICENSE, Gemfile, Gemfile.lock]
+exclude: [.gitignore, _bin, CNAME, LICENSE, README.md, Gemfile, Gemfile.lock]
 timezone: America/New_York
 
 markdown: redcarpet
