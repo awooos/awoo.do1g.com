@@ -1,0 +1,24 @@
+safe: true
+include: [_headers]
+exclude: [.gitignore, _bin, CNAME, LICENSE, Gemfile, Gemfile.lock]
+timezone: America/New_York
+
+markdown: redcarpet
+redcarpet:
+    extensions: [with_toc_data]
+
+url: https://awoo.onl
+
+permalink: /blog/:title/
+
+defaults:
+  -
+    scope:
+      path: "" # All files in the project.
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "post"

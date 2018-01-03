@@ -1,0 +1,54 @@
+---
+title: nightly builds
+layout: default
+---
+
+<ul id="nightlies"></ul>
+<script>
+var endpoint = "https://awooos.nyc3.digitaloceanspaces.com/";
+
+function addRelease(release) {
+  var ul    = document.getElementById("nightlies");
+  var li    = document.createElement("li");
+  var a     = document.createElement("a");
+  var url   = endpoint + release["Key"];
+  var name  = release["Key"].split("/").reverse()[0];
+
+console.log(release);
+  a.setAttribute('href', url);
+  a.innerHTML = name;
+
+  li.appendChild(a);
+  ul.appendChild(li);
+}
+
+function pluck_text(node, element) {
+  return node.getElementsByTagName(element)[0].textContent;
+}
+
+function normalizeNode(node) {
+  var keys = ["Key", "LastModified", "ETag", "Size", "StorageClass", "Owner"];
+  var data = {};
+
+  keys.forEach(function (key) { data[key] = pluck_text(node, key); });
+
+  return data;
+}
+
+function addReleases(xml) {
+  releases = xml.getElementsByTagName("Contents");
+
+  // The .slice(1) is to drop the broken /nightlies/... file.
+  [].slice.call(releases).slice(1).map(normalizeNode).reverse().forEach(addRelease);
+}
+
+window.onload = function() {
+  fetch(endpoint).then(function (response) {
+    return response.text();
+  }).then(function (text) {
+    var parser = new DOMParser();
+    xml = parser.parseFromString(text, "text/xml");
+    addReleases(xml);
+  });;
+};
+</script>

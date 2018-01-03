@@ -1,0 +1,160 @@
+/* vim: set fs=css */
+
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  font-family: sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 100%;
+  line-height: 1.5em;
+  color: #24292e;
+  background-color: #fff;
+}
+
+main, header, nav { display: block; }
+header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+main {
+  max-width: 65ch;
+  padding-bottom: 3em;
+  margin: auto;
+}
+
+main :first-child { margin-top: 0; }
+
+code, kbd, pre, samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.highlight {
+  background: #fafafa;
+  overflow: auto;
+}
+
+.highlight pre {
+  padding: 2em;
+}
+
+/* 100ch is some arbitrary number that seems to work. */
+@media(min-width: 100ch) {
+  .highlight {
+    transition: width 1s;
+    width: 65ch;
+  }
+
+  .highlight:hover, .highlight:focus, .highlight.active {
+    width: 85ch;
+  }
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  text-decoration: underline;
+}
+
+h1, h2 { border-bottom: 1px solid #eaecef; }
+
+h1, h2, h3, h4 {
+  margin-top: 1em;
+  margin-bottom: 0em;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+h1 { font-size: 2em;    }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.5em;  }
+h4 { font-size: 1.25em; }
+
+h3:target a:before,
+h3 a:hover:before,
+h3 a:focus:before,
+h4:target a:before,
+h4 a:hover:before,
+h4 a:focus:before {
+  display: block;
+  content: '\25ba'; /* ► */
+  position: absolute;
+  margin-left: -1.25em;
+  color: #0366d6;
+  margin-top: -0.1em; /* HACK: Why does this fix alignment? */
+}
+
+p { margin-top: 1em; margin-bottom: 0; }
+p.urgent {
+  border: 3px solid red;
+  margin: 2em 0;
+  padding: 1em;
+}
+
+ul { margin-top: 0.25em; }
+
+h1 + ul, h2 + ul, h3 + ul, h4 + ul {
+  margin-top: 1em;
+}
+
+header h1 { padding-bottom: 0.25em; }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+}
+nav li {
+  display: inline-block;
+}
+nav li:after {
+  content: '\2022';
+}
+nav li:last-child:after {
+  content: '';
+}
+
+nav li a {
+  padding: 1em;
+}
+
+#table-of-contents, #table-of-contents + ol {
+  margin: 1em auto;
+  max-width: 40ch;
+}
+
+#table-of-contents {
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
+#table-of-contents + ol {
+  margin-top: 0;
+  padding-left: 1em;
+  margin-bottom: 2em;
+}
+
+#table-of-contents + ol li > a {
+  display: inline-block;
+  padding: 0.5em;
+}
+
+.vimeo-video {
+  margin-top: 1em;
+  border: 1px solid #ccc;
+}
+
+.vimeo-video p {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-top: -0.5em;
+}
