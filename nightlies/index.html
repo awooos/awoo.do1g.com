@@ -3,7 +3,69 @@ title: nightly builds
 layout: default
 ---
 
+<div id="loading">Loading list of nightlies...</div>
+
 <ul id="nightlies"></ul>
+
+
+<style>
+@keyframes rotate {
+  0% {
+    transform: rotate(0turn);
+  }
+  25% {
+    transform: rotate(0.25turn);
+  }
+  50% {
+    transform: rotate(0.5turn);
+  }
+  75% {
+    transform: rotate(0.75turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+#loading:before {
+  content: '|';
+  margin-top: -0.5em;
+  padding: 0 0.5em;
+  display: inline-block;
+  animation: rotate 2s infinite;
+}
+
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+    padding-bottom: 1em;
+  }
+
+  100% {
+    opacity: 0;
+    padding-bottom: 0;
+  }
+}
+
+#loading {
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 2em;
+  opacity: 1;
+}
+
+#loading.hide {
+  animation: hide 0.5s;
+  animation-delay: 0.2s;
+}
+</style>
+
 <script>
 var endpoint = "https://awooos.nyc3.digitaloceanspaces.com/";
 
@@ -14,7 +76,6 @@ function addRelease(release) {
   var url   = endpoint + release["Key"];
   var name  = release["Key"].split("/").reverse()[0];
 
-console.log(release);
   a.setAttribute('href', url);
   a.innerHTML = name;
 
@@ -40,6 +101,11 @@ function addReleases(xml) {
 
   // The .slice(1) is to drop the broken /nightlies/... file.
   [].slice.call(releases).slice(1).map(normalizeNode).reverse().forEach(addRelease);
+
+  // Hide the loading indicator.
+  var loading = document.getElementById('loading');
+  loading.className += " hide";
+  setTimeout(function() { loading.setAttribute('style', 'display: none;'); }, 700);
 }
 
 window.onload = function() {
