@@ -29,6 +29,10 @@
     </nav>
   </header>
   <main>
+    {% if page.title != nil %}
+    <h2>{{ page.title }}</h2>
+    {% endif %}
+
 {{ content }}
   </main>
 </body>
