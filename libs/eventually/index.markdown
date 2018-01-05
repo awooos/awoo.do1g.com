@@ -4,8 +4,10 @@ layout: default
 ---
 
 awooOS is built around event-based architecture, using a custom library called
-Eventually ([source](https://github.com/awooos/eventually)).
+Eventually.
 
 Even initializing the hardware abstraction layer is done via an event system.
 This makes decoupling of components easier, so you can swap libraries in and
 out for rapid experimentation.
+
+[Eventually's source is available on GitHub.](https://github.com/awooos/eventually)
