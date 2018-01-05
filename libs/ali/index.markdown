@@ -3,7 +3,7 @@ title: Ali
 layout: default
 ---
 
-Ali is the custom libc implementation used by awooOS.
+Ali is the libc implementation used by awooOS.
 
 It requires an external memory management library. AwooOS uses
 [dmm](/libs/dmm), but you should be able to use anything that can

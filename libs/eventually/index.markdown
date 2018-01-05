@@ -3,7 +3,7 @@ name: Eventually
 layout: default
 ---
 
-awooOS is built around event-based architecture, using a custom library called
+awooOS is built around an event-based architecture, using a library called
 Eventually.
 
 Even initializing the hardware abstraction layer is done via an event system.
