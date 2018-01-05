@@ -6,7 +6,8 @@ A large part of what drove the initial development of awooOS is a focus on
 testability. 
 
 To facilitate a rapid development process we created
-[Tinker](https://github.com/awooos/tinker), a kernel testing framework.
+Tinker ([source](https://github.com/awooos/tinker)), a kernel testing
+framework.
 
 Tinker allows you to test kernel components individually, and then
 _reuse those same tests_ as runtime tests.
