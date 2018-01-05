@@ -13,12 +13,37 @@ standalone repositories.
 
 some of the libraries are:
 
-| Library                                                | Purpose                    |
-|--------------------------------------------------------|----------------------------|
-| [**ali**](https://github.com/awooos/ali)               | a libc implementation.     |
-| [**dmm**](https://github.com/awooos/dmm)               | memory management library. |
-| [**eventually**](https://github.com/awooos/eventually) | event management system.   |
-| [**flail**](https://github.com/awooos/flail)           | kernel panic system.       |
-| **hal**                                                | hardware abstraction layer |
-| **ktest**                                              | kernel testing framework.  |
-| **scheduler**                                          | process scheduler.         |
+<table>
+  <tr>
+    <th>Library</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/awooos/ali"><strong>ali</strong></a></td>
+    <td>a libc implementation.</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/awooos/dmm"><strong>dmm</strong></a></td>
+    <td>memory management library.</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/awooos/eventually"><strong>eventually</strong></a></td>
+    <td>event handler and dispatch library.</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/awooos/flail"><strong>flail</strong></a></td>
+    <td>kernel panic library.</td>
+  </tr>
+  <tr>
+    <td><strong>hal</strong></td>
+    <td>hardware abstraction layer</td>
+  </tr>
+  <tr>
+    <td><strong>ktest</strong></td>
+    <td>kernel testing framework.</td>
+  </tr>
+  <tr>
+    <td><strong>scheduler</strong></td>
+    <td>process scheduler./td>
+  </tr>
+</table>
