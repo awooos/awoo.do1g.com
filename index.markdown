@@ -13,10 +13,11 @@ standalone repositories.
 
 some of the libraries are:
 
-* *eventually* &mdash; event management system.
+* [*ali*](https://github.com/awooos/ali) &mdash; a libc implementation.
+* [*eventually*](https://github.com/awooos/eventually) &mdash; event management system.
 * *hal-i386* &mdash; the hardware abstraction layer implementation for
   the i386 platform.
 * *ktest* &mdash; kernel testing framework.
-* *libpanic* &mdash; a framework for kernel panics.
+* [*flail*](https://github.com/awooos/flail) &mdash; a framework for kernel panics.
 * *scheduler* &mdash; process scheduler.
 * [*dmm*](https://github.com/awooos/dmm) &mdash; memory management library.
