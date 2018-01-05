@@ -13,6 +13,29 @@ standalone repositories.
 
 some of the libraries are:
 
+<style>
+table {
+  margin: 1em 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5em 2em;
+}
+th:first-child, td:first-child {
+  padding-left: 0;
+}
+th:last-child, td:last-child {
+  padding-right: 0;
+}
+
+tr {
+  border-bottom: 1px solid #aaa;
+}
+</style>
+
 <table>
   <tr>
     <th>Library</th>
@@ -44,6 +67,6 @@ some of the libraries are:
   </tr>
   <tr>
     <td><strong>scheduler</strong></td>
-    <td>process scheduler./td>
+    <td>process scheduler.</td>
   </tr>
 </table>
