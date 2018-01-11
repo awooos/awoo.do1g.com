@@ -1,6 +1,9 @@
 ---
 ---
 
+**If you'd like to fund work on awooOS, you can [donate to
+duckinator on liberapay](https://liberapay.com/duckinator/).**
+
 awooOS is an experimental operating system, aiming at modernizing and
 simplifying kernel development.
 
