@@ -5,7 +5,7 @@ timezone: America/New_York
 
 markdown: redcarpet
 redcarpet:
-    extensions: [with_toc_data]
+    extensions: [footnotes, tables, with_toc_data]
 
 url: https://awoo.onl
 

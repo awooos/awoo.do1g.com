@@ -1,49 +1,45 @@
 ---
 ---
 
-**If you'd like to fund work on awooOS, you can [donate to
-duckinator on liberapay](https://liberapay.com/duckinator/).**
+**If you like awooOS, you can help fund it by donating to duckinator on
+[liberapay](https://liberapay.com/duckinator/) or
+[Patreon](https://patreon.com/duckinator).**
 
-awooOS is an experimental operating system, aiming at modernizing and
-simplifying kernel development.
+awooOS is an experimental operating system, attempting to modernize and
+simplify kernel development.
 
-Code reuse is a very important aspect of this project. As such,
+Code reuse is an important aspect of this project. For this reason,
 functionality is divided into individual libraries, services, and tools.
+All of these are released under the MIT license.
 
-For the same reason, all code for awooOS is released under the MIT
-license, allowing easy integration into other codebases.
+## Libraries
 
-<table>
-  <tr>
-    <th>Library</th>
-    <th>Purpose</th>
-  </tr>
-  <tr>
-    <td><a href="/libs/ali"><strong>ali</strong></a></td>
-    <td>a libc implementation.</td>
-  </tr>
-  <tr>
-    <td><a href="/libs/dmm"><strong>dmm</strong></a></td>
-    <td>memory management library.</td>
-  </tr>
-  <tr>
-    <td><a href="/libs/eventually"><strong>eventually</strong></a></td>
-    <td>event handler and dispatch library.</td>
-  </tr>
-  <tr>
-    <td><a href="/libs/flail"><strong>flail</strong></a></td>
-    <td>kernel panic library.</td>
-  </tr>
-  <tr>
-    <td><strong>hal</strong></td>
-    <td>hardware abstraction layer</td>
-  </tr>
-  <tr>
-    <td><strong>scheduler</strong></td>
-    <td>process scheduler.</td>
-  </tr>
-  <tr>
-    <td><a href="/libs/tinker"><strong>tinker</strong></a></td>
-    <td>kernel testing framework.</td>
-  </tr>
-</table>
+The kernel itself is around 50 LOC, with everything else being implemented
+as libraries.
+
+NOTE: In the table below, "libc" and "ali" are listed as distinct
+dependencies, because ali accumulated nonstandard components during
+experimentation. This needs to be resolved in some way.
+
+| Library     | Purpose           | Required Deps            | Optional Deps |
+|-------------|-------------------|--------------------------|---------------|
+| [ali][1]    | libc, events      | memory manager           | Tinker        |
+| [cadel][2]  | graphics          | (unknown)                | (unknown)     |
+| [dmm][3]    | memory manager    | libc (stddef.h, stdint.h)| Tinker        |
+| [flail][4]  | kernel panics     | libc (stddef.h, stdint.h)| Tinker        |
+| greeter[^1] | boot-time greetng | Ali (event, text)        | (none)        |
+| [hal][5][^1]| hardware abstraction layer | libc, Ali, DMM, Flail   | Tinker|
+| shell[^1]   | minimal shell     | libc, Ali (event, str)   | (none)        |
+| tests[^2]   | Tinker integration| Ali, Tinker.[^3]         | ???           |
+| [tinker][6] | kernel test framework | libc, Ali (number)   | (none)        |
+
+[^1]: Planned to eventually be removed from the source tree.
+[^2]: awooOS-specific, and thus will remain in the awooOS source tree.
+[^3]: the awooOS-specific `tests` library depends on every library awooOS links to that uses Tinker.
+
+[1]: https://github.com/awooos/ali
+[2]: https://github.com/awooos/cadel
+[3]: https://github.com/awooos/dmm
+[4]: https://github.com/awooos/flail
+[5]: https://github.com/awooos/hal
+[6]: https://github.com/awooos/tinker
