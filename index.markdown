@@ -28,9 +28,9 @@ experimentation. This needs to be resolved in some way.
 | [dmm][3]    | memory manager    | libc (stddef.h, stdint.h)| Tinker        |
 | [flail][4]  | kernel panics     | libc (stddef.h, stdint.h)| Tinker        |
 | greeter[^1] | boot-time greetng | Ali (event, text)        | (none)        |
-| [hal][5][^1]| hardware abstraction layer | libc, Ali, DMM, Flail   | Tinker|
+| hal[^1]     | hardware abstraction layer | libc, Ali, DMM, Flail   | Tinker|
 | shell[^1]   | minimal shell     | libc, Ali (event, str)   | (none)        |
-| tests[^2]   | Tinker integration| Ali, Tinker.[^3]         | ???           |
+| tests[^2]   | Tinker integration| Ali, Tinker[^3]          | ???           |
 | [tinker][6] | kernel test framework | libc, Ali (number)   | (none)        |
 
 [^1]: Planned to eventually be removed from the source tree.
