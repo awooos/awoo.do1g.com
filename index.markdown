@@ -21,17 +21,17 @@ NOTE: In the table below, "libc" and "ali" are listed as distinct
 dependencies, because ali accumulated nonstandard components during
 experimentation. This needs to be resolved in some way.
 
-| Library     | Purpose           | Required Deps            | Optional Deps |
-|-------------|-------------------|--------------------------|---------------|
-| [ali][1]    | libc, events      | memory manager           | Tinker        |
-| [cadel][2]  | graphics          | (unknown)                | (unknown)     |
-| [dmm][3]    | memory manager    | libc (stddef.h, stdint.h)| Tinker        |
-| [flail][4]  | kernel panics     | libc (stddef.h, stdint.h)| Tinker        |
-| greeter[^1] | boot-time greetng | Ali (event, text)        | (none)        |
-| hal[^1]     | hardware abstraction layer | libc, Ali, DMM, Flail   | Tinker|
-| shell[^1]   | minimal shell     | libc, Ali (event, str)   | (none)        |
-| tests[^2]   | Tinker integration| Ali, Tinker[^3]          | ???           |
-| [tinker][6] | kernel test framework | libc, Ali (number)   | (none)        |
+| Library     | Purpose                 | Required Deps             | Optional Deps |
+|-------------|-------------------------|---------------------------|---------------|
+| [ali][1]    | libc, events            | memory manager            | Tinker        |
+| [cadel][2]  | graphics                | (unknown)                 | (unknown)     |
+| [dmm][3]    | memory manager          | libc (stddef.h, stdint.h) | Tinker        |
+| [flail][4]  | kernel panics           | libc (stddef.h, stdint.h) | Tinker        |
+| greeter[^1] | boot-time greeting      | Ali (event, text)         | (none)        |
+| hal[^1]     | hardware abstraction layer | libc, Ali, DMM, Flail  | Tinker        |
+| shell[^1]   | minimal shell           | libc, Ali (event, str)    | (none)        |
+| tests[^2]   | Tinker integration      | Ali, Tinker[^3]           | ???           |
+| [tinker][6] | kernel test framework   | libc, Ali (number)        | (none)        |
 
 [^1]: Planned to eventually be removed from the source tree.
 [^2]: awooOS-specific, and thus will remain in the awooOS source tree.
