@@ -45,18 +45,6 @@ code, kbd, pre, samp {
   padding: 2em;
 }
 
-/* 100ch is some arbitrary number that seems to work. */
-@media(min-width: 100ch) {
-  .highlight {
-    transition: width 1s;
-    width: 65ch;
-  }
-
-  .highlight:hover, .highlight:focus, .highlight.active {
-    width: 85ch;
-  }
-}
-
 a {
   color: #0366d6;
   text-decoration: none;
@@ -94,11 +82,6 @@ h4 a:focus:before {
 }
 
 p { margin-top: 1em; margin-bottom: 0; }
-p.urgent {
-  border: 3px solid red;
-  margin: 2em 0;
-  padding: 1em;
-}
 
 ul { margin-top: 0.25em; }
 
@@ -125,27 +108,6 @@ nav li:last-child:after {
 
 nav li a {
   padding: 1em;
-}
-
-#table-of-contents, #table-of-contents + ol {
-  margin: 1em auto;
-  max-width: 40ch;
-}
-
-#table-of-contents {
-  margin-top: 2em;
-  margin-bottom: 0;
-}
-
-#table-of-contents + ol {
-  margin-top: 0;
-  padding-left: 1em;
-  margin-bottom: 2em;
-}
-
-#table-of-contents + ol li > a {
-  display: inline-block;
-  padding: 0.5em;
 }
 
 .vimeo-video {
