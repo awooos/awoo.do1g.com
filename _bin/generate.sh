@@ -11,8 +11,8 @@ function update() {
     dest_file="libs/${name}/index.markdown"
 
     mkdir -p "$(dirname $dest_file)"
-    printf -- "---\ntitle: ${name}\nlayout: default\n---\n\n" > $dest_file
-    cat "$src_file" >> $dest_file
+    printf -- "---\n---\n\n" > $dest_file
+    cat "$src_file" | sed 's/^#/##/' >> $dest_file
 }
 
 trap cleanup EXIT
