@@ -12,7 +12,7 @@ function update() {
 
     mkdir -p "$(dirname $dest_file)"
     printf -- "---\n---\n\n" > $dest_file
-    cat "$src_file" | sed 's/^#/##/' >> $dest_file
+    sed '/^# *\(include\|define\|undef\|if\|ifdef\|ifndef\|else\|elsif\|endif\|error\|pragma\)/b; s/^#/##/' "$src_file" >> $dest_file
 }
 
 trap cleanup EXIT
