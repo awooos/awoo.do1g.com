@@ -1,10 +1,12 @@
 ---
-title: DMM
-layout: default
 ---
 
-DMM is the memory management library used by awooOS. It was originally
-extracted from an older project, but is being rewritten to better align with
-awooOS' goals of reusability and simplicity.
+## dmm
 
-[DMM's source is available on GitHub.](https://github.com/awooos/dmm)
+A memory management library made for
+[awooOS](https://github.com/awooos/awooos).
+
+## License
+
+The code is available as open source under the [MIT
+License](https://github.com/awoos/dmm/raw/master/LICENSE.txt).
