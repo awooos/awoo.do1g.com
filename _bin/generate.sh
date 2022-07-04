@@ -24,5 +24,9 @@ for dir in /tmp/awooos/src/libraries/*; do
     update $dir
 done
 
-[ -n "$CI" ] || bundle install || exit $?
-bundle exec jekyll build || exit $?
+if [ -n "$CI" ]; then
+    jekyll build
+else
+    bundle install
+    bundle exec jekyll build
+fi
