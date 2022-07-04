@@ -26,7 +26,7 @@
     </nav>
   </header>
   <main>
-    {% if page.title != nil and not page.hide_title %}
+    {% if page.title != nil and page.hide_title != true %}
     <h2>{{ page.title }}</h2>
     {% endif %}
 
