@@ -2,11 +2,10 @@
 ---
 
 **If you like awooOS, you can help fund it's development via
-[GitHub Sponsors](https://github.com/sponsors/duckinator) or
 [Patreon](https://patreon.com/duckinator).**
 
 awooOS attempts to provide a modular collection of libraries, services, and
-utilities that can be used to build a POSIX-compliant system.
+utilities that can be used to build a mostly-POSIX-compliant system.
 
 Code is generally released under the MIT license, to allow easy reuse.
 
